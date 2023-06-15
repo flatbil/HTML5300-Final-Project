@@ -9,7 +9,19 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      // Add Open Graph meta tags for social media sharing
+      { hid: 'og:title', property: 'og:title', content: 'My Awesome Website' },
+      { hid: 'og:description', property: 'og:description', content: 'Add your Open Graph description here' },
+      { hid: 'og:image', property: 'og:image', content: '/og-image.jpg' }, // Replace '/og-image.jpg' with your actual Open Graph image URL
+      { hid: 'og:url', property: 'og:url', content: 'https://www.example.com' }, // Replace 'https://www.example.com' with your website URL
+      
+      // Add Twitter Card meta tags
+      { hid: 'twitter:card', name: 'twitter:card', content: 'This is a summary' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Final Project' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Hope this shows up on twitter' },
+      { hid: 'twitter:image', name: 'twitter:image', content: '/twitter-card-image.jpg' }, // Replace '/twitter-card-image.jpg' with your actual Twitter Card image URL
+      { hid: 'twitter:site', name: 'twitter:site', content: '@yourtwitterhandle' }, // Replace '@yourtwitterhandle' with your Twitter handle
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -53,6 +65,7 @@ export default {
       lang: 'en'
     }
   },
+  
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
